@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Mod server" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Release\Mod server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="ModList.cc" />
+		<Unit filename="ModList.h" />
+		<Unit filename="WONnetwk.cc" />
+		<Unit filename="WONnetwk.h" />
+		<Unit filename="banlist.cc" />
+		<Unit filename="banlist.h" />
+		<Unit filename="chalnum.cc" />
+		<Unit filename="chalnum.h" />
+		<Unit filename="externs.h" />
+		<Unit filename="input.cc" />
+		<Unit filename="input.h" />
+		<Unit filename="main.cc" />
+		<Unit filename="packetry.cc" />
+		<Unit filename="packetry.h" />
+		<Unit filename="pkt_IN.cc" />
+		<Unit filename="pkt_OUT.cc" />
+		<Unit filename="port.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

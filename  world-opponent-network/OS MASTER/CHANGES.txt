@@ -1,0 +1,43 @@
+09.12.2008: If you ban an IP, that IP should no longer be able to send you heartbeats, effectively blocking that server from being listed.  Unfortunately, M2Ms weren't checked, so a blocked server could still be listed if M2Ms are both accepted and a server that sends M2Ms hasn't blocked the same server you have.  Whelp, I plugged that hole.  Yay.
+
+02:17: If someone sends the packet an unrecognized type, it no longer replies.  Before, there was a very nasty back-and-forth transmission between the master and a game server if the master was banned on the game server, for some reason.  Whoops.
+
+12:27: Untested changes.  M2Ms have the option to be sent on all heartbeats, and Ben's protests over the incorrect MOD server query should be pacified.
+
+12:01: Actually TESTED the previous update's code, and fixed it.  Also polished the turd a bit more.
+
+11.31: Revisited code after working on HL engien for a while.  Lots of little internal formatting changes, biggest functionality change is the addition of MOD server packets, and a class to handle mods.  Untested and incomplete though--it's not polished, but it should work.
+
+06.03: Updated a fair bit of printable text, changed the version system to use the __DATE__ and __TIME__ preprocessor thingies.  Also removed all the commandline parsing crap and replaced with with a library called 'Options'.
+It looks soooo much neater.  
+
+05.18: Fixed bug (misconception) about getting the local addresses.
+Fixed bug when deleting bans.  It was one character.
+Forced 0 and -1 addresses to be banned by default (since they're also 'bad string' values)
+Added unroutable classes by default
+Developed concerns over accuracy of banning; rejected connections now logged.
+No longer floods console over ENETRESET
+Now records number of failed transmissions (ENETRESET)
+
+v0.75:  Menu is done.  Well more-or-less; it's workable, if not all that user friendly.  You SHOULD use config files instead of the menu anyway, but the option is there and some of it has even been tested.  The config file stuff is also done, and while I *could* let you define which files to load from, right now they're static.  That's easily changed if you absolutely HAVE to load from your favorite file name.  Oh, and I made some much needed changes to the Won2 network lists.  Near as I can tell I just forgot to add in a few impotant things.  Fixed.  It should now be very difficult to send yourself packets, and dummy master servers shouldn't do bad things.
+03.30: Fixed small bug that caused adding masters to hang horribly.  Also finally got the libaries to compile smoothly on linux and found out about an obscure curses 'feature' that acts differently in unix than windows (fixed).  And lastly, fixed the thing not correctly sending MSMs and giving errors.04.10: finally hacked together workaround, uh, I mean fixed, everything related to m2ms.  Really.  This time I think I got it.  New bug regarding filter requests found and finally fixed.
+
+v0.71b:  Began merging classes 'stats' and 'input'.  Lots of messy curses windows created, destroyed.  As of right now, parts of the menu work, and the internals are manageable.
+
+v0.71a:  Added a few #defines and got it to compile on a unix box.  Hah!  You must alter one line of
+port.h in order to specify your system though.
+-lncurses -pthreads
+03.02: Retooled 'v' packets.  Looks better, probably more stable, base functionality hasn't really changed.
+	Added in filtering.  Untested.
+	Retooled '0' and 'z' packets when adding servers.  Code is possibly a little bit slower, but it is better organized which will make adding stats easier.
+03.04: Those zeros on the main window now go up and down when servers chime in :)
+03.07: I know I fixed that optimization bug in 'stats.cc'... How did I lose that update?  Re-fixed.
+
+v0.70a:
+Started curses interface, began finding all printfs and arranging windows.  Made some small code changes I missed the first time around to wonnetwk class; bug has mysteriously vanished...
+
+v0.65 rc3:
+Fixed Remake_w_replypacket(); now works, problem was just a stupid mistaek.
+
+v0.65 rc2:
+Spent 6 months working on project, finally crossed 'start logging changes' from list

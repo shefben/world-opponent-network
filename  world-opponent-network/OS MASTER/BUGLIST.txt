@@ -1,0 +1,9 @@
+All segments that break out of curses (usually to read in from the console) cause odd behaviors.  For example, in windows the console window scrolls down to output and must be manually scrolled back up by the user, making it difficult to realize you're back at the menu in curses mode.  This for some reason rectifies itself if you go back to the main menu, but I couldn't replicate that effect anywhere else.  Some curses quirk I just don't know about, I guess.
+
+m2ms suffer from nulls in ports and IPs screwing the tokenizing.  May be present elsewhere.  fix when using memcmp: either force all calls to GetKeyPairValue to use packetbuffer and co, or add in size key.  'Temp' fix: update pointer in z packets to just beyond IP/port.
+
+Transistor claims M2Ms only work one way.  Haven't been able to replicate issue yet.
+
+Server counter sometimes goes noticeably askew.  No effect on logic.
+
+Endian woes in master server structs.  We should store in network order.

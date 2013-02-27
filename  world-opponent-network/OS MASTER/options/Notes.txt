@@ -1,0 +1,3 @@
+This small and very old library works like a charm, unlike the thousand or so other command line libraries that wouldn't compile or port or anything.  Well that's not entirely true; for some reason I get some sort of linking error in ld when I try to make it a dll, but static linking is probably for the best anyway.
+
+It's not exactly all inclusive, but it does what I need.
