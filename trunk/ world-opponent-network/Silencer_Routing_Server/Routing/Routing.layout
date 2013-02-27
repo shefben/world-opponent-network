@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="..\RoutingServer.cc" open="1" top="1" tabpos="1">
+		<Cursor position="4918" topLine="0" />
+	</File>
+	<File name="..\RoutingServer.h" open="1" top="0" tabpos="3">
+		<Cursor position="394" topLine="0" />
+	</File>
+	<File name="..\SrvrNtwk.h" open="1" top="0" tabpos="2">
+		<Cursor position="954" topLine="19" />
+	</File>
+	<File name="..\options\options.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="7207" topLine="285" />
+	</File>
+</CodeBlocks_layout_file>

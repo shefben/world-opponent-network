@@ -1,0 +1,7 @@
+MOTD (motd.txt)
+Mirroring other master server. (masterserverlist.txt)
+Backup database to text file. (backup.txt every 30 seconds)
+Console interaction.
+Thread pooling.
+Server verification.
+New secruity with reply keys.

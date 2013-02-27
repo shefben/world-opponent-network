@@ -1,0 +1,2 @@
+This is the Message of the Day.
+It does now accept multiple lines.

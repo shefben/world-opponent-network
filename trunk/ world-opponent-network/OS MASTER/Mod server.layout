@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="ModList.cc" open="0" top="0" tabpos="0">
+		<Cursor position="4393" topLine="53" />
+	</File>
+	<File name="ModList.h" open="0" top="0" tabpos="0">
+		<Cursor position="768" topLine="12" />
+	</File>
+	<File name="WONnetwk.cc" open="0" top="0" tabpos="3">
+		<Cursor position="2596" topLine="74" />
+	</File>
+	<File name="WONnetwk.h" open="0" top="0" tabpos="4">
+		<Cursor position="485" topLine="14" />
+	</File>
+	<File name="banlist.cc" open="0" top="0" tabpos="0">
+		<Cursor position="2365" topLine="75" />
+	</File>
+	<File name="banlist.h" open="0" top="0" tabpos="0">
+		<Cursor position="574" topLine="8" />
+	</File>
+	<File name="chalnum.cc" open="0" top="0" tabpos="0">
+		<Cursor position="424" topLine="0" />
+	</File>
+	<File name="externs.h" open="0" top="0" tabpos="6">
+		<Cursor position="623" topLine="0" />
+	</File>
+	<File name="input.cc" open="0" top="0" tabpos="2">
+		<Cursor position="1109" topLine="30" />
+	</File>
+	<File name="input.h" open="0" top="0" tabpos="5">
+		<Cursor position="746" topLine="11" />
+	</File>
+	<File name="main.cc" open="0" top="0" tabpos="1">
+		<Cursor position="817" topLine="3" />
+	</File>
+	<File name="packetry.cc" open="0" top="0" tabpos="7">
+		<Cursor position="1405" topLine="42" />
+	</File>
+	<File name="packetry.h" open="0" top="0" tabpos="0">
+		<Cursor position="1014" topLine="0" />
+	</File>
+	<File name="pkt_IN.cc" open="0" top="0" tabpos="0">
+		<Cursor position="23" topLine="0" />
+	</File>
+	<File name="pkt_OUT.cc" open="0" top="0" tabpos="0">
+		<Cursor position="2168" topLine="51" />
+	</File>
+	<File name="port.h" open="0" top="0" tabpos="0">
+		<Cursor position="870" topLine="1" />
+	</File>
+</CodeBlocks_layout_file>

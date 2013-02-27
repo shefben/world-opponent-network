@@ -1,0 +1,5 @@
+To do:
+
+Make a releasable mod server.
+Add in the 'that can't possibly happen' error checking
+Allow server to be forced to listen on a specific IP

@@ -1,0 +1,3 @@
+This DLL is from libconfig-1.0.1, a library released under the LGPL (I think I'm suppossed to mention that, but I haven't and don't plan to read the thing).  I downloaded it from http://www.hyperrealm.com/.  You can too.
+
+Compiling it was a less than pleasant experience on both unix and windows.  Instead I offer the libraries, static and linked.  Cross your fingers and hope you don't have to compile the library yourself.

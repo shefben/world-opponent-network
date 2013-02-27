@@ -1,0 +1,6 @@
+So far I've added two libraries:  Boost, for the filesystem, and cprops for AVL trees.  Both libraries provide much more, but that's all I require.
+
+Boost is fairly complicated to install and use.  Its inclusion is something I somewhat regret; I might've been better off using something else, as Boost and I are often at odds.  Unfortunately, there really aren't a lot of good portable file lobs, and I really didn't want to write my own.
+
+cprops offers a lot of nifty things, and I like it.  It's much easier for me to modify than boost, and its style of design is close to what I myself use.  Right now, I'm only using the avl trees.  It might--at some other date--be prudent to gut the library and remove all of the things I never plan on using.  But right now it doesn't hurt much, so I'll leave it alone.  The only problem with cprops is it's desuigned for unix OR VS on Windows, and not MingW.  Because of this, some of the defines and configurations needed reworking.  They are minor, but they are enough to warn you about.
+At the moment, to use the AVL trees, only the files "avl.c collection.c mempool.c rb.c vector.c" need to be compiled.  If you have problems compiling any other files, then don't compile them.

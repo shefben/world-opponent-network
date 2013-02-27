@@ -1,0 +1,8 @@
+One master per line. - Kigen
+
+t1m1.tribes0.com:28000
+kigen.ath.cx:28000
+t1m1.masters.dynamix.com:28000
+t1m2.masters.dynamix.com:28000
+t1m3.masters.dynamix.com:28000
+skbmaster.ath.cx:28000

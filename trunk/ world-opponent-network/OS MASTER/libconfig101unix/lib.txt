@@ -1,0 +1,3 @@
+This so is from libconfig-1.0.1, a library released under the LGPL (I think I'm suppossed to mention that, but I haven't and don't plan to read the thing).  I downloaded it from http://www.hyperrealm.com/.  You can too.
+
+Compiling it was a less than pleasant experience on both unix and windows.  Instead I offer the libraries, static and linked.  Obviously unlike DLLs in windows, them working isn't a good bet.  Cross your fingers, make sure you're not on an old Sun workstation, and if you do end up having to compile it yourself, download the code and pray the makefile works.

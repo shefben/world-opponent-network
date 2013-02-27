@@ -1,0 +1,203 @@
+#######################################################################
+
+Tool:   MSReborn
+Author: Luigi Auriemma
+e-mail: aluigi@autistici.org
+web:    aluigi.org
+
+#######################################################################
+
+
+1) Introduction
+2) How to use
+3) Compiling
+4) Why
+
+
+#######################################################################
+
+===============
+1) Introduction
+===============
+
+
+MSReborn is a master server engine that uses a memory database.
+A master server is the centralized server used for indexing all the
+online servers of one or more games.
+So this tool can be useful in LAN parties or for those games that are
+no longer supported like for example the Dreamcast online games (the
+main idea from which I have decided to create the project).
+
+It's an engine so it can be used to move various types of master
+servers (from the Quake 3 engine to the Gamespy enctype 0 used for the
+Dreamcast games and so on) and the only difference between the various
+master server emulators derived by it is in a small function contained
+in the files ms.h.
+This solution allows me to spend a short amount of time for writing new
+master server emulators and at the same time the engine (the core of
+everything) is ever updated and optimized since it is independent from
+the rest.
+
+All you need is already available in the program so you don't need to
+set up a SQL server and bla bla bla (very boring), you need only to
+launch the tool and play.
+
+It contains also many runtime options that are ever a good thing.
+
+
+#######################################################################
+
+=============
+2) How to use
+=============
+
+
+Preparation
+-----------
+First verify that all the clients and the servers point to the machine
+where will run the master server emulator.
+Exist many ways to do that, the first is through the adding of
+"IP SERVERNAME" in the hosts file:
+
+ Windows 95/98/Me       c:\windows\hosts
+ Windows NT/2000/XP Pro c:\winnt\system32\drivers\etc\hosts
+ Windows XP Home        c:\windows\system32\drivers\etc\hosts
+ *nix                   /etc/hosts
+
+Example of what to add: 192.168.0.1  master.gamespy.com
+The second choice is through a DNS server or an emulator that points
+ever to the same IP.
+
+
+Server
+------
+Launch the executable of the master server you want to emulate.
+The servers will be added automatically through their heartbeats (the
+packets used for being included in the master server list).
+When a server requests to be removed or its heartbeat times out it
+will be removed from the list.
+
+If you want to add some static servers (never timeout) you can specify
+them in the command line specifying IP:PORT (like 127.0.0.1:27960).
+Exists also a third value that can be used only with the master servers
+that support filters based on game names, versions and so on.
+For example if you run the Quake 3 engine master server you can add the
+server 1.2.3.4:1234:68 that means it will be showed only to the clients
+that request servers with version/protocol 68.
+While on the Gamespy master server the servers are identified by their
+gamenames like ut, quake3 bf1942, halor so the clients will receive
+ever and only the list of servers of the game requested by them.
+
+All the options must be specified BEFORE the static servers and are:
+-d       disables the dynamic servers: only the static are allowed
+-c       disables CRC: CRC is a 32 bit checksum used to recognize the
+         third parameter showed above like the various gamenames,
+         versions and any other possible data used to identify a
+         specific type of host.
+         Some master servers don't support CRC
+-m NUM   the maximum number of servers you want to take in memory.
+         The default parameter is 256 (about 3 kilobytes and half)
+-p PORT  changes the default master server port to another specified by
+         you. Useful for example in the Quake 3 engine where the
+         default port is 27950 used by Quake 3 and you must set it to
+         20110 for Soldier of Fortune II and so on
+-P PORT  as above but available only for those master servers that
+         receive queries on a port and heartbeats on another one
+-q       the quiet option, very useful after you understand how the
+         tool works and no longer need to know the client/servers IP
+-t       avoids the timeout: any dynamic server will stay in the list
+         forever (like the static servers)
+
+A note about security: exist some types of bugs that affect the work of
+any master server and so also my project is not immune (only for the
+moment? uhmmm don't know).
+You can read the following two papers with relative proof-of-concepts
+about some of these bugs:
+
+  http://aluigi.org/papers/msdisc.txt
+  http://aluigi.org/adv/msddos-adv.txt
+
+
+#######################################################################
+
+============
+3) Compiling
+============
+
+
+You need EVER 2 things:
+- the MSReborn files
+- the ms.h file of the master server you want to build
+
+For example, if you want to modify and recompile the Quake 3 engine
+master server you need first to download its q3ms.h file (q3ms.zip) and
+then rename it as ms.h.
+
+Now you can compile MSReborn as you do for any other tool (remember
+-lpthread on the Unix systems) and call the resulted executable as you
+wish, like q3ms or q3ms.exe for example.
+
+
+#######################################################################
+
+======
+4) Why
+======
+
+
+The master server idea was a project that initially supported only the
+Gamespy enctype 0 protocol for letting the Dreamcast games to return
+online.
+Then the engine was enough good for thinking to a bigger project also
+because I already did some small master servers emulators in the past
+and this is the result.
+
+The engine idea is a simple. For example, if I need to write a master
+server for Quake 3, Gamespy, Tribes, Half-Life WON I need to write 4
+programs that have the same core needed to handle the existent and the
+new IPs, the database, the clients, the servers and all the rest.
+While is better to have the central core separated and all the specific
+master servers constituited by a small amount of specific instructions
+with the following results:
+- the code is more easy to read
+- the new code is more easy to write
+- the engine can be updated indipendently, 1 update for 100 programs
+  instead of 100 updates for 100 programs
+- is possible for other other people to create their own master servers
+  so also if the project was something I needed for my confort it
+  could be useful for someone else too
+
+Another great result is the amount of resources needed to do this work.
+The database is stored in memory and you can decide how much big you
+want it.
+The default value of 256 servers in fact is very big so usually
+(depending by the number of servers in your LAN or by what you have in
+mind for your projects) a value of 32 is enough.
+Each server entry occupies 14 bytes of memory: 4 for the IP, 2 for the
+port, 4 for the timeout and 4 for the checksum.
+
+The timeout value is -1 (0xffffffff) for the fixed servers and
+time(NULL) (the time in seconds) for the others.
+
+More interesting instead is the checksum that as already said is needed
+to keep extra informations in memory using only 4 bytes.
+Sure I could use a CRC16 that requires only 2 bytes but exist major
+problems of CRC collisions (same CRC for different data) so I have
+preferred to point on 2 bytes more.
+
+The idea of a memory database is simple, it's more easy to handle the
+database using this way and the resource saved are really a lot.
+Imagine to set up a SQL server without having the needed knowledge on a
+old 386 with Linux... no way.
+
+The tool is little/big-endian compatible and should work on any system
+that uses 4 bytes for integers and 2 for shorts.
+
+It uses threads for handling the requests, Windows threads on Win32 and
+pthread on all the other systems.
+
+As usual let me know all your comments, feedback, ideas and MOREOVER
+optimizations!
+
+
+#######################################################################

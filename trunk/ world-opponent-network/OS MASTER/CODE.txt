@@ -1,0 +1,13 @@
+There are three threads.  
+
+
+Thread 1 blocks until the user hits a key, and then acts upon the input.
+
+Thread 2 handles the statistics output, sleeping for one second before updating the display.  It does nothing necessary, and is effectively 'suspended' while the menu is in use.
+
+Thread 3 blocks until a packet is received.  Thread 3 is also responsible for spawning the threads that time out servers and handle DNS changes.
+One thing that is important to note is that thread 3's management CANNOT OCCUR unless packets are being processed.  This was intentional, but can impede debugging operations if it is not known.
+Thread 3 does NOT spawn a new thread for each packet received; it handles them all one at a time.  This could prevent it from reaching whatever maximum throughput the host computer is capable of, but this maximum would be very hard to achieve.  Still, it's a possible upgrade.
+
+
+If the user decides they want a outputless run, threads are ignored and the program simply jumps to the function thread 3 starts with.  The program will only terminate when given the kill signal.  At present jumping into that mode involves undoing curses and a lot of other unnecessary configuration.  The proper way to do it would most likly be to put all file and command line parsing in the IO constructor and have it return or throw or something to indicate we want no output, and then be a completely separate block of code.  Hindsight and all that; that would be a bit of a restructuring that I just don't feel like doing.

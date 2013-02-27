@@ -1,0 +1,1 @@
+Rather than a manual, this comes with code.  It's not pretty code, nor is the server a pretty server.  A manual will follow after a guide is hammered out.
