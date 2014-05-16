@@ -1,5 +1,0 @@
-SmallMessage Dump:
-  Data Size: 14
-  HeaderType: 5
-  ServiceType: 2
-  MessageType: 3
