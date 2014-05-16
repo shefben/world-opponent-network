@@ -1,0 +1,2 @@
+[AdDisplay]
+DefaultLink=http://groundcontrol.won.net
