@@ -1,0 +1,46 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WONAPI - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Ben\AppData\Local\Temp\RSP6F4C.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GR /GX /ZI /Od /I "." /I ".." /D "_DEBUG" /D "WIN32" /D "_LIB" /D "__WON_MASTER_CPP_BUILD__" /Fr"Debug/" /Fp"Debug/WONAPI.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Sierra\won_dev\Won_src\Complete_wonapi\WONAPI\WONCommon\Common.cpp"
+]
+Creating command line "cl.exe @C:\Users\Ben\AppData\Local\Temp\RSP6F4C.tmp" 
+Creating temporary file "C:\Users\Ben\AppData\Local\Temp\RSP6F4D.tmp" with contents
+[
+/nologo /out:"Lib\WONAPI_d.lib" 
+.\Debug\Auth.obj
+.\Debug\Common.obj
+.\Debug\Config.obj
+.\Debug\Crypt.obj
+.\Debug\DB.obj
+.\Debug\Dir.obj
+.\Debug\gqueryreporting.obj
+.\Debug\Misc.obj
+.\Debug\nonport.obj
+.\Debug\Routing.obj
+.\Debug\Server.obj
+.\Debug\Socket.obj
+.\Debug\WONAPI.obj
+.\Debug\WONStatus.obj
+.\Debug\WONTypes.obj
+]
+Creating command line "link.exe -lib @C:\Users\Ben\AppData\Local\Temp\RSP6F4D.tmp"
+<h3>Output Window</h3>
+Compiling...
+Common.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+WONAPI_d.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

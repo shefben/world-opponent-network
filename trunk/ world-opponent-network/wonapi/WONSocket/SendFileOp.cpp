@@ -1,0 +1,84 @@
+#include "SendFileOp.h"
+
+using namespace WONAPI;
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+SendFileOp::SendFileOp(const std::string &theFilePath, AsyncSocket *theSocket) : SocketOp(theSocket), 
+	mFilePath(theFilePath), mBytes(mBuf,BUF_SIZE)
+{ 
+	mFile = NULL;
+	mSocketEvent[SocketEvent_Write] = true; 
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+void SendFileOp::CloseFile()
+{
+	if(mFile!=NULL)
+	{
+		fclose(mFile);
+		mFile = NULL;
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+bool SendFileOp::ReadFromFile()
+{
+	int aNumRead = fread(mBuf,1,BUF_SIZE,mFile);
+	if(aNumRead<0)
+		aNumRead = 0;
+
+	mBytes.SetData(mBuf,aNumRead);
+	return aNumRead>0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+WONStatus SendFileOp::Start()
+{
+	if(mFilePath.empty())
+		return WS_FailedToOpenFile;
+	
+	mFile = fopen(mFilePath.c_str(),"rb");
+	if(mFile==NULL)
+		return WS_FailedToOpenFile;
+
+	ReadFromFile();
+	return Continue();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+WONStatus SendFileOp::Continue()
+{
+	do
+	{
+		while(mBytes.pos() < mBytes.length())
+		{
+			mSocket->WaitForWrite(TimeLeft());
+
+			int aSentLen = 0;
+			WONStatus aStatus = mSocket->SendBytes(mBytes.data() + mBytes.pos(), mBytes.length() - mBytes.pos(), &aSentLen); 
+			if(aSentLen>0)
+				mBytes.ReadBytes(aSentLen);
+
+			if(aStatus==WS_TimedOut && TimeLeft()==0)
+				return WS_TimedOut;
+			
+			if(aStatus!=WS_Success)
+				return aStatus;
+		}
+	} while(ReadFromFile());
+	
+	CloseFile();
+	return WS_Success;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+void SendFileOp::CleanupHook()
+{
+	CloseFile();
+}

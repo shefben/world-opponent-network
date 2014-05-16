@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[ResourceHeader.dsp]
+SCC_Aux_Path = "\\msdvault\VSS\"
+SCC_Project_Name = "$/Titan/WONAPI/WONGUI/WONGUIConfig", RDNCAAAA
+
+[ResourceHeaderGUI.dsp]
+SCC_Aux_Path = "\\msdvault\VSS\"
+SCC_Project_Name = "$/Titan/WONAPI/WONGUI/WONGUIConfig", RDNCAAAA
+
+[WONGUIConfig.dsp]
+SCC_Aux_Path = "\\msdvault\VSS\"
+SCC_Project_Name = "$/Titan/WONAPI/WONGUI/WONGUIConfig", RDNCAAAA

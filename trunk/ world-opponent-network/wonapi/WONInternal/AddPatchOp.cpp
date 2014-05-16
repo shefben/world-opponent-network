@@ -1,0 +1,71 @@
+#include "AddPatchOp.h"
+
+using namespace WONAPI;
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+AddPatchOp::AddPatchOp(ServerContext* theContext)
+	: DBProxyOp(theContext),
+	  mMsgType(11)
+{
+	Init();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+AddPatchOp::AddPatchOp(const IPAddr& theAddr)
+	: DBProxyOp(theAddr),
+	  mMsgType(11)
+{
+	Init();
+} 
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+WONStatus AddPatchOp::CheckResponse()
+{
+	// Call the base class implementation
+	WONStatus result = DBProxyOp::CheckResponse();
+	if (result != WS_Success)
+		return result;
+	
+	if (mSubMessageReplyType != mMsgType+1)
+		return InvalidReplyHeader();
+	
+	// Do extended unpack
+
+	// Finished
+	return WS_Success;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+void AddPatchOp::RunHook()
+{
+	SetMessageType(DBProxyMsgType::DBProxyPatchServer);
+	SetSubMessageType(mMsgType);
+
+	// Pack the message data
+	WriteBuffer requestData;
+	requestData.AppendString(mProductName);
+	mPatchData->WriteToBuffer(requestData, mIsUpdate);
+
+	// Pack and call base class implementation
+	SetProxyRequestData(requestData.ToByteBuffer());
+	DBProxyOp::RunHook();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+void AddPatchOp::Init()
+{
+	Reset();
+	ServerRequestOp::mLengthFieldSize = 4;
+
+	mProductName	= "";
+	mPatchData		= new PatchData;
+	mIsUpdate		= false;
+
+}
+

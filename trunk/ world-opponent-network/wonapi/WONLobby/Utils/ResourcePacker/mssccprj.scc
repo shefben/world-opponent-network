@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[ResourcePacker.dsp]
+SCC_Aux_Path = "\\Proj\ss\"
+SCC_Project_Name = "$/Libraries/LithTechAVP2/lithshared/wonapi/WONLobby/Utils/ResourcePacker", STDFAAAA
