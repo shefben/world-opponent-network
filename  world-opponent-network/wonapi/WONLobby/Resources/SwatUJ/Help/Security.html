@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Internet Security Help</title>
+</head>
+
+<body>
+<a name="_RefTop"></a>
+<p>Quick Links:
+<a href="HelpRoot.html">Home</a>,
+<a href="HelpTab.html">Using Help</a>,
+<a href="Overview.html">Overview</a>,
+<a href="GameBrowser.html">Game Browser</a>,
+<a href="Chat.html">Chat</a>,
+<a href="Icons.html">Icons</a>,
+<a href="Troubleshooting.html">Troubleshooting</a>
+</p>
+
+<h3 align=center>Playing Through Internet Security</h3>
+<p>The various forms of Internet security can make online play difficult due to the connection
+restrictions that are placed on your machine.  Internet security takes many forms, but has the
+common feature that incoming and/or outgoing connections on your machine/LAN are restricted.
+Most games require that a range of ports (a port is used for a connection to/from your machine)
+be available in order to play online.</p>
+
+<p>As a general rule, online gaming through Internet security will be easiest if your security
+allows all outgoing connections and opens the required ports for necessary incoming connections.
+The necessary ports for each game tend to differ; you will need to open the appropriate
+<a href="GamePorts.html">game ports</a> for the game you wish to play online.  To open the
+necessary ports, consult the documentation for your form of Internet Security.</p>
+
+<p><i><font color="#FF0000">It is not recommended that you disable your Internet security or make use of features such
+as DMZ in order to play online.  Do so at your own risk.</font></i></p>
+
+<p>&nbsp;</p>
+
+<h4>Types of Internet Security</h4>
+<p>In a huge over simplification, there are three general types of Internet Security:
+
+<p><a name="_RefSoftware"><b>Software Firewalls</b></a>.  A software firewall is something that
+runs on your machine to restrict connections.  The most common is <i>Zone Alarm&trade;,</i>
+but there are many others as well.  <i>Windows XP&trade;</i> has a built-in software firewall,
+and it's on by default.</p>
+
+<p><a name="_RefNAT"><b>Network Address Translation (NAT)</b></a>.  NAT allows several machines
+to share a single public Internet address.  Each machine behind NAT has its own private address
+and the same public address.  There  are many ways NAT is implemented, including (but not limited
+to) most broadband routers (<i>Linksys&trade;</i> being the most common), <i>Internet Connection
+Sharing&trade;</i> (ICS), and any number of Linux firewalls.  Many ISPs are also applying NAT to
+their subscribers as well.</p>
+
+<p><a name="_RefProxy"><b>Proxy Servers</b></a>.  Proxy servers are one of the most restrictive
+types of security.  All communication is routed through the proxy, and only types of communication
+the proxy recognizes is allowed in either direction.  In general, most games cannot play online
+via a proxy server without updating the proxy server itself.</p>
+
+<h4>&nbsp;</h4>
+
+<h4>How to Tell if Internet Security is Preventing Online Play</h4>
+<p>If outgoing connections from your machine or LAN are being blocked, you will be unable to login
+to Sierra Online, and an error suggesting you check your Internet connection will be displayed.</p>
+
+<p>To check if incoming connections to your machine or LAN are being blocked, go to the
+<a href="OptionsTab.html#_RefHosting">Options</a> tab and check the lower left to see if the
+<a href="Icons.html">TAC icon</a> is present.  If present, this icon signifies that connections
+cannot be made to your machine.<p>
+
+<h4>But I don't Have Internet Security and I'm Still Having Trouble</h4>
+<p>Go to the <a href="OptionsTab.html#_RefHosting">Options</a> tab and check the lower left.  Does
+a different <i>local address</i> and <i>public address</i> appear?  If so, you are behind some
+sort of <a href="#_RefNAT">NAT</a> or <a href="#_RefProxy">proxy</a> security.  If you are using
+a LAN, then contact your network administrator for help playing online.  Otherwise, your ISP may
+be applying NAT or a proxy to your connection.  You will need to contact them for help.</p>
+
+<p>If you are not showing different local and public addresses, then you most likely have a
+<a href="#_RefSoftware">software firewall</a> restricting connections.  You will need disable the
+software firewall or consult the appropriate documentation or vendor to play through the
+software firewall.</p>
+
+<h4>&nbsp;</h4>
+
+<h4>Links for additional information:</h4>
+<p><a href="http://support.microsoft.com/" target="_browser">
+<i>Microsoft&trade;</i> Support</a></p>
+
+<p><a href="http://www.linksys.com/support/default.asp" target="_browser">
+<i><i>Linksys&trade;</i> Support</a></p>
+
+<p><a href="http://support1.netgear.com/netgear1/" target="_browser">
+<i><i>NetGear&trade;</i> Support</a></p>
+
+<p><a href="http://www.zonelabs.com/store/content/support/support.jsp" target="_browser">
+<i><i>ZoneAlarm&trade;</i> Support</a></p>
+
+<p><a href="http://blackice.iss.net/customer_support.php" target="_browser">
+<i><i>BlackICE&trade;</i> Support</a></p>
+
+<p><a href="http://www.microsoft.com/windowsxp/pro/using/howto/networking/icf.asp" target="_browser">
+<i>Windows XP&trade;</i> Firewall</a></p>
+
+<p><a href="http://lrp.steinkuehler.net/" target="_browser">
+A <i>Linux&trade;</i> Firewall Site</a></p>
+
+<p><center>
+<a href="HelpRoot.html">Return to Home</a>
+</center></p>
+
+</body>
+</html>

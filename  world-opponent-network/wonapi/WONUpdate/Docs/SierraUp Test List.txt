@@ -1,0 +1,42 @@
+[ ] Correct: FTP ....................... Update download via FTP
+[ ] Correct: HTTP ...................... Update download via HTTP
+[ ] Correct: Visit ..................... Forced to visit the host
+
+[ ] Error: FTP - No User Name .......... Fetch requires user name
+[ ] Error: FTP – No Password ........... Fetch requires password
+[ ] Error: FTP – No User or Password ... Fetch requires both
+[ ] Error: FTP – Wrong User Name ....... Fetch requires user name
+[ ] Error: FTP – Wrong Password ........ Fetch requires password
+[ ] Error: FTP – Bad Host .............. Invalid URL
+[ ] Error: FTP – Missing File .......... Invalid URL
+[ ] Error: FTP – Size Too Big .......... Update will fail validation
+[ ] Error: FTP – Size Too Small ........ Update will fail validation
+[ ] Error: FTP – Wrong Checksum ........ Update will fail validation
+
+[ ] Error: HTTP – Bad Host ............. Invalid URL
+[ ] Error: HTTP – Missing File ......... Invalid URL
+[ ] Error: HTTP – Size Too Big ......... Update will fail validation
+[ ] Error: HTTP – Size Too Small ....... Update will fail validation
+[ ] Error: HTTP – Wrong Checksum ....... Update will fail validation
+
+[ ] Error: Visit – Bad Host ............ Invalid URL
+[ ] Error: Visit – Missing File ........ Invalid URL
+
+[ ] Warning: Bad Host URL .............. Cannot visit host
+[ ] Warning: No Host URL ............... Cannot visit host
+[ ] Warning: No Host Name or Text ...... Generic "Host" used instead
+[ ] Warning: No Host Name .............. Text pulled from "Host Text"
+[ ] Warning: No Host Text .............. Text pulled from "Host Name"
+[ ] Warning: FTP – Bad Host Bmp ........ No error: Won't show up
+[ ] Warning: HTTP – Bad Host Bmp ....... No error: Won't show up
+[ ] Warning: No Host BMP ............... Image won't show up
+[ ] Warning: Oversized Host BMP ........ Image won't show up
+
+[ ] Extra: Already Have Right Update ... Get correct update from disk
+[ ] Extra: Already Have Wrong Update ... Get invalid update from disk
+
+Key:
+  Correct: ... The patch should download and install successfuly.
+  Error: ..... Something will prevent a successful update.
+  Warning: ... An extra capability won't work, but the update will.
+  Extra: ..... These items don't show up in the Test Host List.

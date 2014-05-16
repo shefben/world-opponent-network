@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[TestLobby.dsp]
+SCC_Aux_Path = "\\msdvault\VSS\"
+SCC_Project_Name = "$/Titan/WONAPI/WONLobby", XHDCAAAA
+
+[WONLobby.dsp]
+SCC_Aux_Path = "\\msdvault\VSS\"
+SCC_Project_Name = "$/Titan/WONAPI/WONLobby", XHDCAAAA
+
+[WONLobbyAlone.dsp]
+SCC_Aux_Path = "\\msdvault\VSS\"
+SCC_Project_Name = "$/Titan/WONAPI/WONLobby", XHDCAAAA

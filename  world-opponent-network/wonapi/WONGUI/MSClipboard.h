@@ -1,0 +1,19 @@
+#ifndef __WON_MSCLIPBOARD_H__
+#define __WON_MSCLIPBOARD_H__
+
+/*
+namespace WONAPI
+{
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+class Clipboard
+{
+public:
+	static GUIString Get();
+	static void Set(const GUIString &theStr);
+};
+*/
+
+}; // namespace WONAPI
+
+#endif

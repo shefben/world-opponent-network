@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>Game Browser Help</title>
+</head>
+
+<body>
+<a name="_RefTop"></a>
+<p>Quick Links:
+<a href="HelpRoot.html">Home</a>,
+<a href="HelpTab.html">Using Help</a>,
+<a href="Overview.html">Overview</a>,
+Game Browser,
+<a href="Chat.html">Chat</a>,
+<a href="Icons.html">Icons</a>,
+<a href="Troubleshooting.html">Troubleshooting</a>
+</p>
+
+<h3 align=center>Game Browser</h3>
+<p>The Game Browser displays games that are available to join and/or in-progress.  It is available on
+several screens including the <a href="LobbyTab.html">Lobby Tab</a>, <a href="LanTab.html">LAN Tab</a>,
+and <a href="DirectTab.html">Direct Tab</a>.  The game browser consists of a multi-column list box;
+each row of the list box represents a game.  The various columns provide summary information about each
+game.  If <i>Show Games in Progress </i>Option is enabled, in-progress games are displayed in a disabled color.</p>
+
+<p>Below the list box on the left side is a summary of the games available.  It lists the number of
+games displayed as well as the total games available (displayed and not displayed) in
+parentheses.  If
+one or more games is currently being refreshed, the number of servers refreshed out of total is
+displayed.</p>
+
+<h4><a name="_RefButtons">Game Browser Buttons</a></h4>
+<p>The following buttons are available below the list box:</p>
+
+<ul type=circle>
+<li><p><i>Join Game</i>.  Attempts to join the currently selected game.  This button is only enabled
+if there is a game selected, and it allows you to join.</p></li>
+
+<li><p><i>Host Game</i>.  Hosts a new game on your machine.  The
+<a href="HostGame.html">Host Game Dialog</a> will be displayed.</p></li>
+
+<li><p><i>Refresh List</i>.  Refreshes the current lists of games.  This may take awhile if the number
+of games is large.  Note that while a Refresh of any games is in progress, this button will display
+<i>Stop Refresh</i>.  Clicking will abort the Refresh of any remaining games.</p></li>
+</ul>
+
+<p><a href="#_RefTop">Return to Top</a></p>
+
+<h4><a name="_RefColumns">Game Browser Columns</a></h4>
+<p>Each column of the game browser provides information about the game; most are self explanatory.  The
+following columns contain special information:</p>
+
+<ul type=circle>
+<li><p><i>Info</i>.  The Info column is the left-most column.  It contains a triangle
+which may be
+clicked to toggle display of extended game details.  It will also contain an <a href="Icons.html">icon</a>
+if the game has any <a href="EntryRestrictions.html">entry restrictions</a>.</p></li>
+
+<li><p><i>Skill</i>.  The Skill column is the second-left-most column.  If a game has been
+ designated for a certain skill level (novice, intermediate, advanced, expert), an appropriate
+<a href="Icons.html">icon</a> will be displayed.</p></li>
+
+<li><p><i>Ping</i>.  The Ping column is the right-most column.  It shows a measurement of the latency
+between your machine and the game machine.  The display is a series of green bars; the more green
+bars, the lower the latency (and the better the game will play).  If a game is not responding, the
+Ping column will contain the Not Responding <a href="Icons.html">icon</a>.</p></li>
+</ul>
+
+<p><a href="#_RefTop">Return to Top</a></p>
+
+<h4><a name="_RefGameInfo">Joining Games and Game Information</a></h4>
+<p>You can attempt to join a game by double-clicking it, by right-clicking it and
+selecting <i>connect</i>, or by selecting it and pressing the <i>Join Game</i> button.  Note that some games have
+<a href="EntryRestrictions.html">entry restrictions</a> that may prevent you from joining.  If joining
+is successful, you will be taken to the <a href="GameTab.html">Game Tab</a>; if joining fails, an
+appropriate error will be displayed.</p>
+
+<p>You may click on the triangle in the left column of game to toggle display of extended details.  Note
+that opening extended details may take a few seconds as the game must be queried.  Extended details
+are displayed directly below the game in the Game Browser.
+
+<p>You may right click on a game for a popup menu of commands.  The available commands will include:
+connect, refresh server, show details and refresh list.</p>
+
+<table width=95% align=center cols=2>
+<tr>
+	<td width=20%><i>Join Game</i></td>
+	<td>Attempt to join the game.</td>
+</tr>
+<tr>
+	<td><i>Ping Game</i></td>
+	<td>Refresh the game details and ping.</td>
+</tr>
+<tr>
+	<td><i>Query Details</i></td>
+	<td>Refresh the game details and ping.</td>
+</tr>
+<tr>
+	<td><i>Show/Hide Details</i></td>
+	<td>Toggle display of extended game details.</td>
+</tr>
+</table>
+
+<p><a href="#_RefTop">Return to Top</a></p>
+
+<h4><a name="_RefSort">Sorting and Filtering</a></h4>
+<p>The list of games may be sorted by any column.  Click on the column header
+name to sort the games in ascending order by that column.  Click on the same column again
+to sort the games in descending order by that column.</p>
+
+<p>You may also filter the game list by column(s).  Filters may be applied to any column
+from a combo box below its title.  You may select a pre-defined filter from the drop-down list of the
+combo box or define your own filter by typing one in the combo box.  Filters restrict the game list
+to only games that match the filter.  For instance, if you enter <i>Bob</i> in the game name column
+filter, only games that begin with <i>Bob</i> will appear.  Certain columns support more advanced
+filters that allow comparisons (<, <=, >, >=).  Check the sample filters for each column to see examples
+of what is supported.  To remove filtering for a column, select <i>No Filter</i> from the drop-down list.</p>
+
+<p>You may also add your own custom filters and remove filters (including sample filters) for each
+column.  To add, enter the filter in the combo box and select <i>Add</i> in the drop-down list.  To
+remove a filter, select select the filter from the drop-down list or enter the filter in the combo box,
+then select <i>Remove</i> in the drop-down list.  You may reset all filters to their default list
+in the
+<a href="OptionsTab.html">Options Tab</a>.</p>
+
+<p><a href="#_RefTop">Return to Top</a></p>
+
+<p><center>
+<a href="HelpRoot.html">Return to Home</a>
+</center></p>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: zlib - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\temp\RSPC28.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GR /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/zlib.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Main\Titan\WONAPI\WONGUI\zlib\adler32.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\compress.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\crc32.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\deflate.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\gzio.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\infblock.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\infcodes.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\inffast.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\inflate.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\inftrees.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\infutil.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\trees.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\uncompr.c"
+"C:\Main\Titan\WONAPI\WONGUI\zlib\zutil.c"
+]
+Creating command line "cl.exe @c:\temp\RSPC28.tmp" 
+Creating temporary file "c:\temp\RSPC29.tmp" with contents
+[
+/nologo /out:"Debug\zlib.lib" 
+.\Debug\adler32.obj
+.\Debug\compress.obj
+.\Debug\crc32.obj
+.\Debug\deflate.obj
+.\Debug\gzio.obj
+.\Debug\infblock.obj
+.\Debug\infcodes.obj
+.\Debug\inffast.obj
+.\Debug\inflate.obj
+.\Debug\inftrees.obj
+.\Debug\infutil.obj
+.\Debug\trees.obj
+.\Debug\uncompr.obj
+.\Debug\zutil.obj
+]
+Creating command line "link.exe -lib @c:\temp\RSPC29.tmp"
+<h3>Output Window</h3>
+Compiling...
+adler32.c
+compress.c
+crc32.c
+deflate.c
+gzio.c
+infblock.c
+infcodes.c
+inffast.c
+inflate.c
+inftrees.c
+infutil.c
+trees.c
+uncompr.c
+zutil.c
+Creating library...
+
+
+
+<h3>Results</h3>
+zlib.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
