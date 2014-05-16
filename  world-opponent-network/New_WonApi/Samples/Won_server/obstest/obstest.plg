@@ -1,0 +1,147 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: obstest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Media\AppData\Local\Temp\RSPAD19.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\msg\obs" /I "\." /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/obstest.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"H:\Sierra\won_dev\Darkreign2 WonApi\Samples\Won_server\obstest\obstest.cpp"
+]
+Creating command line "cl.exe @C:\Users\Media\AppData\Local\Temp\RSPAD19.tmp" 
+Creating temporary file "C:\Users\Media\AppData\Local\Temp\RSPAD1A.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\msg\obs" /I "\." /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"H:\Sierra\won_dev\Darkreign2 WonApi\Observation\ObservationAPI.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\msg\Obs\ObsMsgs.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Observation\SocketMgr.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\SDKCommon\Completion.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\SDKCommon\MemStream.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\SDKCommon\Stream.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\IPSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\IPXSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\PXSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\SPXSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\TCPSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\TMsgSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\UDPSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\Socket\WSSocket.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\msg\BadMsgException.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\msg\TMessage.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\msg\Comm\CommMsgs.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\DataObject.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\EventLog.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\RegKey.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\Threadbase.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\UTF8String.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\Utils.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\WONDebug.cpp"
+"H:\Sierra\won_dev\Darkreign2 WonApi\common\WONException.cpp"
+]
+Creating command line "cl.exe @C:\Users\Media\AppData\Local\Temp\RSPAD1A.tmp" 
+Creating temporary file "C:\Users\Media\AppData\Local\Temp\RSPAD2A.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\msg\obs" /I "\." /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/obstest.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"H:\Sierra\won_dev\Darkreign2 WonApi\Samples\Won_server\obstest\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Media\AppData\Local\Temp\RSPAD2A.tmp" 
+Creating temporary file "C:\Users\Media\AppData\Local\Temp\RSPAD2B.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/obstest.pdb" /debug /machine:I386 /out:"Debug/obstest.exe" /pdbtype:sept 
+".\Debug\obstest.obj"
+".\Debug\ObservationAPI.obj"
+".\Debug\ObsMsgs.obj"
+".\Debug\SocketMgr.obj"
+".\Debug\Completion.obj"
+".\Debug\MemStream.obj"
+".\Debug\Stream.obj"
+".\Debug\IPSocket.obj"
+".\Debug\IPXSocket.obj"
+".\Debug\PXSocket.obj"
+".\Debug\SPXSocket.obj"
+".\Debug\TCPSocket.obj"
+".\Debug\TMsgSocket.obj"
+".\Debug\UDPSocket.obj"
+".\Debug\WSSocket.obj"
+".\Debug\BadMsgException.obj"
+".\Debug\TMessage.obj"
+".\Debug\CommMsgs.obj"
+".\Debug\DataObject.obj"
+".\Debug\EventLog.obj"
+".\Debug\RegKey.obj"
+".\Debug\Threadbase.obj"
+".\Debug\UTF8String.obj"
+".\Debug\Utils.obj"
+".\Debug\WONDebug.obj"
+".\Debug\WONException.obj"
+"..\..\..\bin\auth.lib"
+"..\..\..\bin\common.lib"
+"..\..\..\bin\crypt.lib"
+".\Debug\StdAfx.obj"
+]
+Creating command line "link.exe @C:\Users\Media\AppData\Local\Temp\RSPAD2B.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+obstest.cpp
+Compiling...
+ObservationAPI.cpp
+h:\sierra\won_dev\darkreign2 wonapi\observation\observationapi.h(12) : fatal error C1083: Cannot open include file: 'Socket/WONWS.h': No such file or directory
+ObsMsgs.cpp
+h:\sierra\won_dev\darkreign2 wonapi\msg\obs\mmsgobsaddpublisher.cpp(11) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+SocketMgr.cpp
+h:\sierra\won_dev\darkreign2 wonapi\observation\socketmgr.h(21) : fatal error C1083: Cannot open include file: 'Socket/WONWS.h': No such file or directory
+Completion.cpp
+h:\sierra\won_dev\darkreign2 wonapi\sdkcommon\completion.h(6) : fatal error C1083: Cannot open include file: 'common/Event.h': No such file or directory
+MemStream.cpp
+h:\sierra\won_dev\darkreign2 wonapi\sdkcommon\stream.h(26) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+Stream.cpp
+h:\sierra\won_dev\darkreign2 wonapi\sdkcommon\stream.h(26) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+IPSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+IPXSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+PXSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+SPXSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+TCPSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+TMsgSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+UDPSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+WSSocket.cpp
+h:\sierra\won_dev\darkreign2 wonapi\socket\wonsocket.h(25) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+BadMsgException.cpp
+h:\sierra\won_dev\darkreign2 wonapi\msg\badmsgexception.cpp(13) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+TMessage.cpp
+h:\sierra\won_dev\darkreign2 wonapi\msg\tmessage.cpp(2) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+CommMsgs.cpp
+h:\sierra\won_dev\darkreign2 wonapi\msg\comm\tmsgcommdebuglevel.cpp(8) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+DataObject.cpp
+h:\sierra\won_dev\darkreign2 wonapi\common\dataobject.h(5) : fatal error C1083: Cannot open include file: 'common/CriticalSection.h': No such file or directory
+EventLog.cpp
+RegKey.cpp
+h:\sierra\won_dev\darkreign2 wonapi\common\regkey.cpp(7) : fatal error C1083: Cannot open include file: 'common/won.h': No such file or directory
+Generating Code...
+Compiling...
+Threadbase.cpp
+UTF8String.cpp
+Utils.cpp
+WONDebug.cpp
+WONException.cpp
+Generating Code...
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+obstest.exe - 19 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿Build started 10/10/2012 7:58:20 PM.
+     1>Project "E:\Sierra\Development\Darkreign2 WonApi\Samples\ServerTest\Sniffer\Sniffer.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Template\Sniffer.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W1 /WX- /O2 /Oy- /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Template\\" /Fd"Template\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Sierra\Development\Darkreign2 WonApi\Samples\ServerTest\Template\Sniffer.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Template\Sniffer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"E:\Sierra\Development\Darkreign2 WonApi\Samples\ServerTest\Template\Sniffer.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Sierra\Development\Darkreign2 WonApi\Samples\ServerTest\Template\Sniffer.lib" /MACHINE:X86 Template\main.obj
+         Sniffer.vcxproj -> E:\Sierra\Development\Darkreign2 WonApi\Samples\ServerTest\Template\Sniffer.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\Sierra\Development\Darkreign2 WonApi\Samples\ServerTest\Template\Sniffer.exe;#1" /manifest Template\Sniffer.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Template\Sniffer.unsuccessfulbuild".
+         Touching "Template\Sniffer.lastbuildstate".
+     1>Done Building Project "E:\Sierra\Development\Darkreign2 WonApi\Samples\ServerTest\Sniffer\Sniffer.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.82

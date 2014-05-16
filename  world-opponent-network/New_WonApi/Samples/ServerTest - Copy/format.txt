@@ -1,0 +1,15 @@
+ define all ports
+ 
+ initiallize won lib
+ init winsock as per server init
+ 
+ main{
+ 
+ go through servers and start them
+ 
+ 
+ for each connection, send to correct server port
+ 
+ 
+ start a new thread  for each connection.
+ 
